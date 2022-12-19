@@ -1,4 +1,4 @@
-package com.myapplication;
+package com.myapplication.database;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -8,6 +8,9 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
+
+import com.myapplication.database.dao.Dao;
+import com.myapplication.database.entities.CourseModal;
 
 // adding annotation for our database entities and db version.
 @Database(entities = {CourseModal.class}, version = 1)

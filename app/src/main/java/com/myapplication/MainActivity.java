@@ -18,6 +18,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.myapplication.adapter.CourseRVAdapter;
+import com.myapplication.database.entities.CourseModal;
 
 import java.util.List;
 

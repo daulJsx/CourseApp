@@ -1,10 +1,12 @@
-package com.myapplication;
+package com.myapplication.database.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
+
+import com.myapplication.database.entities.CourseModal;
 
 import java.util.List;
 

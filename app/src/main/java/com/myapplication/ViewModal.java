@@ -6,6 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
+import com.myapplication.database.entities.CourseModal;
+
 import java.util.List;
 
 public class ViewModal extends AndroidViewModel {

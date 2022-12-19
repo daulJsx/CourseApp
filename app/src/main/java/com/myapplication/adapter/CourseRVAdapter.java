@@ -1,4 +1,4 @@
-package com.myapplication;
+package com.myapplication.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,13 +10,16 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.myapplication.R;
+import com.myapplication.database.entities.CourseModal;
+
 public class CourseRVAdapter extends ListAdapter<CourseModal, CourseRVAdapter.ViewHolder> {
 
     // creating a variable for on item click listener.
     private OnItemClickListener listener;
 
     // creating a constructor class for our adapter class.
-    CourseRVAdapter() {
+    public CourseRVAdapter() {
         super(DIFF_CALLBACK);
     }
 

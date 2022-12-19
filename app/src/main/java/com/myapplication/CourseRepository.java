@@ -5,6 +5,10 @@ import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
+import com.myapplication.database.CourseDatabase;
+import com.myapplication.database.dao.Dao;
+import com.myapplication.database.entities.CourseModal;
+
 import java.util.List;
 
 public class CourseRepository {
