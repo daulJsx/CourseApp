@@ -1,4 +1,4 @@
-package com.myapplication;
+package com.myapplication.database.entities;
 
 
 import androidx.room.Entity;
@@ -37,7 +37,7 @@ public class StudentModal {
 
     // on below line we are creating
     // getter and setter methods.
-    public String getStudent_name() {
+    public String getStudentName() {
         return student_name;
     }
 
@@ -45,7 +45,7 @@ public class StudentModal {
         this.student_name = student_name;
     }
 
-    public String getStudent_phone() {
+    public String getStudentPhone() {
         return student_phone;
     }
 
