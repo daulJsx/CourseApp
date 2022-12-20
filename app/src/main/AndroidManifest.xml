@@ -13,6 +13,20 @@
         android:theme="@style/Theme.CRUDRoomDatabase"
         tools:targetApi="31">
         <activity
+            android:name=".ListDataStudent"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ListDataCourse"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activity_new_course"
             android:exported="false">
             <meta-data
