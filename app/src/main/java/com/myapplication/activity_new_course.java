@@ -25,7 +25,7 @@ public class activity_new_course extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_course);
+        setContentView(R.layout.activity_course_new);
 
         // initializing our variables for each view.
         courseNameEdt = findViewById(R.id.idEdtCourseName);

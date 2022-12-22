@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbCreate"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bg_home_wave"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tbCreate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="642dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:strokeColor="@color/colorPrimaryDark"
+                app:strokeWidth="2dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="617dp"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/idCreate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:text="Input Student"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+
+                    <ImageView
+                        android:id="@+id/imgStudy"
+                        android:layout_width="180dp"
+                        android:layout_height="155dp"
+                        android:layout_marginStart="90dp"
+                        android:layout_marginTop="40dp"
+                        app:srcCompat="@drawable/study" />
+
+                    <TextView
+                        android:id="@+id/txtNama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/idCreate"
+                        android:layout_marginTop="175dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Nama Lengkap :"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/etNama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtNama"
+                        android:layout_marginTop="8dp"
+                        android:ems="19"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Masukkan Nama Lengkap Anda"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtNohp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etNama"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="No Hp :"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/etNohp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtNohp"
+                        android:layout_marginTop="4dp"
+                        android:ems="19"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Masukkan No Hp Anda"
+                        android:inputType="number|textPersonName"
+                        android:minHeight="48dp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtDaftar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etNohp"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Tanggal Pendaftaran :"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/etDaftar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtDaftar"
+                        android:layout_marginTop="9dp"
+                        android:ems="19"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="Masukkan Tanggal Pendaftaran"
+                        android:inputType="date"
+                        android:minHeight="48dp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtDurasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etDaftar"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text=" Durasi :"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/etDurasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtDurasi"
+                        android:layout_marginTop="7dp"
+                        android:ems="19"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint=" Masukan Durasi kursus"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etDurasi"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginTop="11dp"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:text="Simpan" />
+
+                    <Button
+                        android:id="@+id/buttonBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etDurasi"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="223dp"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:text="Kembali" />
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
