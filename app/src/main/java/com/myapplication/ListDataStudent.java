@@ -118,7 +118,7 @@ public class ListDataStudent extends AppCompatActivity {
             studentViewModal.insert(model);
             Toast.makeText(this, "Course saved", Toast.LENGTH_SHORT).show();
         } else if (requestCode == EDIT_STUDENT_REQUEST && resultCode == RESULT_OK) {
-            int id = data.getIntExtra(activity_new_course.EXTRA_ID, -1);
+            int id = data.getIntExtra(activity_create_student.EXTRA_STUDENT_ID, -1);
             if (id == -1) {
                 Toast.makeText(this, "Course can't be updated", Toast.LENGTH_SHORT).show();
                 return;

@@ -43,7 +43,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
                         android:gravity="center"
-                        android:text="Input Course"
+                        android:text="@string/input_course"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="19sp"
                         android:textStyle="bold" />
@@ -64,7 +64,7 @@
                         android:layout_below="@+id/idCreate"
                         android:layout_marginTop="203dp"
                         android:fontFamily="@font/poppins_semibold"
-                        android:text="Course Name :"
+                        android:text="@string/course_name"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
 
@@ -76,7 +76,7 @@
                         android:layout_marginTop="5dp"
                         android:ems="19"
                         android:fontFamily="@font/poppins_medium"
-                        android:hint="Enter Course Name"
+                        android:hint="@string/enter_course_name"
                         android:inputType="textPersonName"
                         android:minHeight="48dp"
                         android:textSize="16sp" />
@@ -88,7 +88,7 @@
                         android:layout_below="@+id/idEdtCourseName"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppins_semibold"
-                        android:text="Course Description :"
+                        android:text="@string/course_description"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
 
@@ -100,7 +100,7 @@
                         android:layout_marginTop="6dp"
                         android:ems="19"
                         android:fontFamily="@font/poppins_medium"
-                        android:hint="Enter Course Description"
+                        android:hint="@string/enter_course_description"
                         android:inputType="text|textPersonName"
                         android:minHeight="48dp"
                         android:textSize="16sp" />
@@ -112,7 +112,7 @@
                         android:layout_below="@+id/idEdtCourseDescription"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/poppins_semibold"
-                        android:text=" Course Price :"
+                        android:text="@string/course_price"
                         android:textColor="@android:color/black"
                         android:textSize="17sp" />
 
@@ -124,7 +124,7 @@
                         android:layout_marginTop="6dp"
                         android:ems="19"
                         android:fontFamily="@font/poppins_medium"
-                        android:hint=" Enter Price"
+                        android:hint="@string/enter_price"
                         android:inputType="number"
                         android:minHeight="48dp"
                         android:textSize="16sp" />
@@ -138,7 +138,7 @@
                         android:layout_marginStart="48dp"
                         android:layout_marginTop="42dp"
                         android:backgroundTint="@color/colorPrimaryDark"
-                        android:text="Simpan" />
+                        android:text="@string/simpan" />
 
                     <Button
                         android:id="@+id/buttonBack"
@@ -149,7 +149,7 @@
                         android:layout_marginStart="218dp"
                         android:layout_marginTop="41dp"
                         android:backgroundTint="@color/colorPrimaryDark"
-                        android:text="Kembali" />
+                        android:text="@string/kembali" />
 
 
                 </RelativeLayout>
