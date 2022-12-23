@@ -12,15 +12,15 @@ import android.widget.Toast;
 public class activity_new_course extends AppCompatActivity {
 
     // creating a variables for our button and edittext.
-    private EditText courseNameEdt, courseDescEdt, courseDurationEdt;
-    private Button courseBtn;
+    private EditText courseNameEdt, courseDescEdt, coursePriceEdt;
+    private Button courseBtn, btnCourseBack;
 
     // creating a constant string variable for our
     // course name, description and duration.
     public static final String EXTRA_ID = "com.gtappdevelopers.gfgroomdatabase.EXTRA_ID";
     public static final String EXTRA_COURSE_NAME = "com.gtappdevelopers.gfgroomdatabase.EXTRA_COURSE_NAME";
     public static final String EXTRA_DESCRIPTION = "com.gtappdevelopers.gfgroomdatabase.EXTRA_COURSE_DESCRIPTION";
-    public static final String EXTRA_DURATION = "com.gtappdevelopers.gfgroomdatabase.EXTRA_COURSE_DURATION";
+    public static final String EXTRA_COURSE_PRICE = "com.gtappdevelopers.gfgroomdatabase.EXTRA_COURSE_PRICE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +30,19 @@ public class activity_new_course extends AppCompatActivity {
         // initializing our variables for each view.
         courseNameEdt = findViewById(R.id.idEdtCourseName);
         courseDescEdt = findViewById(R.id.idEdtCourseDescription);
-        courseDurationEdt = findViewById(R.id.idEdtCourseDuration);
+        coursePriceEdt = findViewById(R.id.idEdtCoursePrice);
         courseBtn = findViewById(R.id.idBtnSaveCourse);
+        btnCourseBack = findViewById(R.id.buttonBack);
+
+        btnCourseBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // starting a new activity for adding a new course
+                // and passing a constant value in it.
+                Intent i = new Intent(activity_new_course.this, ListDataCourse.class);
+                startActivity(i);
+            }
+        });
 
         // below line is to get intent as we
         // are getting data via an intent.
@@ -41,7 +52,7 @@ public class activity_new_course extends AppCompatActivity {
             // setting values to our edit text fields.
             courseNameEdt.setText(intent.getStringExtra(EXTRA_COURSE_NAME));
             courseDescEdt.setText(intent.getStringExtra(EXTRA_DESCRIPTION));
-            courseDurationEdt.setText(intent.getStringExtra(EXTRA_DURATION));
+            coursePriceEdt.setText(intent.getStringExtra(EXTRA_COURSE_PRICE));
         }
 
         // adding on click listener for our save button.
@@ -52,13 +63,13 @@ public class activity_new_course extends AppCompatActivity {
                 // the text fields are empty or not.
                 String courseName = courseNameEdt.getText().toString();
                 String courseDesc = courseDescEdt.getText().toString();
-                String courseDuration = courseDurationEdt.getText().toString();
-                if (courseName.isEmpty() || courseDesc.isEmpty() || courseDuration.isEmpty()) {
+                String coursePrice = coursePriceEdt.getText().toString();
+                if (courseName.isEmpty() || courseDesc.isEmpty() || coursePrice.isEmpty()) {
                     Toast.makeText(activity_new_course.this, "Please enter the valid course details.", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 // calling a method to save our course.
-                saveCourse(courseName, courseDesc, courseDuration);
+                saveCourse(courseName, courseDesc, coursePrice);
             }
         });
     }
@@ -71,7 +82,7 @@ public class activity_new_course extends AppCompatActivity {
         // in below line we are passing all our course detail.
         data.putExtra(EXTRA_COURSE_NAME, courseName);
         data.putExtra(EXTRA_DESCRIPTION, courseDescription);
-        data.putExtra(EXTRA_DURATION, courseDuration);
+        data.putExtra(EXTRA_COURSE_PRICE, courseDuration);
         int id = getIntent().getIntExtra(EXTRA_ID, -1);
         if (id != -1) {
             // in below line we are passing our id.

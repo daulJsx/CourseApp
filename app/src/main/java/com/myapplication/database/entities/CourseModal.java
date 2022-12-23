@@ -24,15 +24,15 @@ public class CourseModal {
 
     // below line is use
     // for course duration.
-    private String courseDuration;
+    private String coursePrice;
 
     // below line we are creating constructor class.
     // inside constructor class we are not passing
     // our id because it is incrementing automatically
-    public CourseModal(String courseName, String courseDescription, String courseDuration) {
+    public CourseModal(String courseName, String courseDescription, String coursePrice) {
         this.courseName = courseName;
         this.courseDescription = courseDescription;
-        this.courseDuration = courseDuration;
+        this.coursePrice = coursePrice;
     }
 
     // on below line we are creating
@@ -53,12 +53,12 @@ public class CourseModal {
         this.courseDescription = courseDescription;
     }
 
-    public String getCourseDuration() {
-        return courseDuration;
+    public String getCoursePrice() {
+        return coursePrice;
     }
 
-    public void setCourseDuration(String courseDuration) {
-        this.courseDuration = courseDuration;
+    public void setCoursePrice(String coursePrice) {
+        this.coursePrice = coursePrice;
     }
 
     public int getId() {

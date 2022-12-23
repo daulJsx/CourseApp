@@ -13,63 +13,64 @@ public class StudentModal {
     @PrimaryKey(autoGenerate = true)
 
     // variable for our id.
-    private int student_id;
+    private int studentId;
 
     // below line is a variable
     // for student name.
-    private String student_name;
+    private String studentName;
 
-    private String student_phone;
+    private String studentPhone;
 
-    private String start_date;
+//    private String registrationDate;
 
-    private String course_duration;
+    private String courseDuration;
 
     // below line we are creating constructor class.
     // inside constructor class we are not passing
     // our id because it is incrementing automatically
-    public StudentModal(String student_name,String student_phone,String start_date,String course_duration) {
-        this.student_name = student_name;
-        this.student_phone = student_phone;
-        this.start_date= start_date;
-        this.course_duration = course_duration;
+    public StudentModal(String studentName,String studentPhone,String courseDuration) {
+        this.studentName = studentName;
+        this.studentPhone = studentPhone;
+//        this.registrationDate= registrationDate;
+        this.courseDuration = courseDuration;
     }
+
 
     // on below line we are creating
     // getter and setter methods.
     public String getStudentName() {
-        return student_name;
+        return studentName;
     }
 
-    public void setStudentName(String student_name) {
-        this.student_name = student_name;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
     public String getStudentPhone() {
-        return student_phone;
+        return studentPhone;
     }
 
-    public void setStudentPhone(String student_phone) { this.student_phone = student_phone;}
+    public void setStudentPhone(String studentPhone) { this.studentPhone = studentPhone;}
 
-    public String getStartDate() {
-        return start_date;
-    }
-
-    public void setStartDate(String start_date) { this.start_date = start_date;}
+//    public String getStartDate() {
+//        return start_date;
+//    }
+//
+//    public void setStartDate(String start_date) { this.start_date = start_date;}
 
     public String getCourseDuration() {
-        return course_duration;
+        return courseDuration;
     }
 
     public void setCourseDuration(String courseDuration) {
-        this.course_duration = course_duration;
+        this.courseDuration = courseDuration;
     }
 
     public int getStudentId() {
-        return student_id;
+        return studentId;
     }
 
-    public void setStudentId(int id) {
-        this.student_id = student_id;
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
     }
 }

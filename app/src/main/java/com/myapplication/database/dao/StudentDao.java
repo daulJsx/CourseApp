@@ -9,7 +9,7 @@ import androidx.room.Update;
 import com.myapplication.database.entities.StudentModal;
 
 import java.util.List;
-
+@androidx.room.Dao
 public interface StudentDao {
 
     // below method is use to
@@ -35,6 +35,6 @@ public interface StudentDao {
     // below line is to read all the courses from our database.
     // in this we are ordering our courses in ascending order
     // with our course name.
-    @Query("SELECT * FROM student_table ORDER BY student_name ASC")
+    @Query("SELECT * FROM student_table ORDER BY studentName ASC")
     LiveData<List<StudentModal>> getAllStudents();
 }

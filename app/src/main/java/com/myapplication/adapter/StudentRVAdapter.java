@@ -36,7 +36,6 @@ public class StudentRVAdapter extends ListAdapter<StudentModal, StudentRVAdapter
             // below line is to check the course name, description and course duration.
             return oldItem.getStudentName().equals(newItem.getStudentName()) &&
                     oldItem.getStudentPhone().equals(newItem.getStudentPhone()) &&
-                    oldItem.getStartDate().equals(newItem.getStartDate()) &&
                     oldItem.getCourseDuration().equals(newItem.getCourseDuration());
         }
     };
@@ -57,9 +56,8 @@ public class StudentRVAdapter extends ListAdapter<StudentModal, StudentRVAdapter
         // each item of our recycler view.
         // TEXTVIEW DISESUAIKAN YA
         StudentModal model = getStudentAt(position);
-        holder.courseNameTV.setText(model.getStudentName());
-        holder.courseDescTV.setText(model.getStudentPhone());
-        holder.courseDurationTV.setText(model.getStartDate());
+        holder.studentNameTV.setText(model.getStudentName());
+        holder.studentPhoneTV.setText(model.getStudentPhone());
         holder.courseDurationTV.setText(model.getCourseDuration());
     }
 
@@ -70,15 +68,14 @@ public class StudentRVAdapter extends ListAdapter<StudentModal, StudentRVAdapter
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         // view holder class to create a variable for each view.
-        TextView courseNameTV, courseDescTV, courseDurationTV;
+        TextView  studentNameTV,  studentPhoneTV, courseDurationTV;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             // initializing each view of our recycler view.
-            courseNameTV = itemView.findViewById(R.id.idTVStudentName);
-            courseDescTV = itemView.findViewById(R.id.idTVStudentPhone);
-            courseDurationTV = itemView.findViewById(R.id.idTVStartDate);
-            courseDescTV = itemView.findViewById(R.id.idTVCourseDuration);
+            studentNameTV = itemView.findViewById(R.id.idTVStudentName);
+            studentPhoneTV = itemView.findViewById(R.id.idTVStudentPhone);
+            courseDurationTV = itemView.findViewById(R.id.idTVCourseDuration);
 
             // adding on click listener for each item of recycler view.
             itemView.setOnClickListener(new View.OnClickListener() {

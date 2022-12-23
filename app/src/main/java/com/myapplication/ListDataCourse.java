@@ -97,7 +97,7 @@ public class ListDataCourse extends AppCompatActivity {
                 intent.putExtra(activity_new_course.EXTRA_ID, model.getId());
                 intent.putExtra(activity_new_course.EXTRA_COURSE_NAME, model.getCourseName());
                 intent.putExtra(activity_new_course.EXTRA_DESCRIPTION, model.getCourseDescription());
-                intent.putExtra(activity_new_course.EXTRA_DURATION, model.getCourseDuration());
+                intent.putExtra(activity_new_course.EXTRA_COURSE_PRICE, model.getCoursePrice());
 
                 // below line is to start a new activity and
                 // adding a edit course constant.
@@ -112,8 +112,8 @@ public class ListDataCourse extends AppCompatActivity {
         if (requestCode == ADD_COURSE_REQUEST && resultCode == RESULT_OK) {
             String courseName = data.getStringExtra(activity_new_course.EXTRA_COURSE_NAME);
             String courseDescription = data.getStringExtra(activity_new_course.EXTRA_DESCRIPTION);
-            String courseDuration = data.getStringExtra(activity_new_course.EXTRA_DURATION);
-            CourseModal model = new CourseModal(courseName, courseDescription, courseDuration);
+            String coursePrice = data.getStringExtra(activity_new_course.EXTRA_COURSE_PRICE);
+            CourseModal model = new CourseModal(courseName, courseDescription, coursePrice);
             viewmodal.insert(model);
             Toast.makeText(this, "Course saved", Toast.LENGTH_SHORT).show();
         } else if (requestCode == EDIT_COURSE_REQUEST && resultCode == RESULT_OK) {
@@ -124,8 +124,8 @@ public class ListDataCourse extends AppCompatActivity {
             }
             String courseName = data.getStringExtra(activity_new_course.EXTRA_COURSE_NAME);
             String courseDesc = data.getStringExtra(activity_new_course.EXTRA_DESCRIPTION);
-            String courseDuration = data.getStringExtra(activity_new_course.EXTRA_DURATION);
-            CourseModal model = new CourseModal(courseName, courseDesc, courseDuration);
+            String coursePrice = data.getStringExtra(activity_new_course.EXTRA_COURSE_PRICE);
+            CourseModal model = new CourseModal(courseName, courseDesc, coursePrice);
             model.setId(id);
             viewmodal.update(model);
             Toast.makeText(this, "Course updated", Toast.LENGTH_SHORT).show();

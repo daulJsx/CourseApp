@@ -36,7 +36,7 @@ public abstract class StudentDatabase extends RoomDatabase {
                     // we are creating a database builder and passing
                     // our database class with our database name.
                     Room.databaseBuilder(context.getApplicationContext(),
-                                    StudentDatabase.class, "course_database")
+                                    StudentDatabase.class, "student_database")
                             // below line is use to add fall back to
                             // destructive migration to our database.
                             .fallbackToDestructiveMigration()
