@@ -72,8 +72,8 @@ public class CourseRVAdapter extends ListAdapter<CourseModal, CourseRVAdapter.Vi
             super(itemView);
             // initializing each view of our recycler view.
             courseNameTV = itemView.findViewById(R.id.idTVCourseName);
-            courseDescTV = itemView.findViewById(R.id.idTVCourseDescription);
-            coursePriceTV = itemView.findViewById(R.id.idEdtCoursePrice);
+            courseDescTV = itemView.findViewById(R.id.idTVCourseDuration);
+            coursePriceTV = itemView.findViewById(R.id.idTVCoursePrice);
 
             // adding on click listener for each item of recycler view.
             itemView.setOnClickListener(new View.OnClickListener() {
