@@ -36,6 +36,7 @@ public class StudentRVAdapter extends ListAdapter<StudentModal, StudentRVAdapter
             // below line is to check the course name, description and course duration.
             return oldItem.getStudentName().equals(newItem.getStudentName()) &&
                     oldItem.getStudentPhone().equals(newItem.getStudentPhone()) &&
+                    oldItem.getRegistrationDate().equals(newItem.getRegistrationDate()) &&
                     oldItem.getCourseDuration().equals(newItem.getCourseDuration());
         }
     };
@@ -58,6 +59,7 @@ public class StudentRVAdapter extends ListAdapter<StudentModal, StudentRVAdapter
         StudentModal model = getStudentAt(position);
         holder.studentNameTV.setText(model.getStudentName());
         holder.studentPhoneTV.setText(model.getStudentPhone());
+        holder.registrationDateTV.setText(model.getRegistrationDate());
         holder.courseDurationTV.setText(model.getCourseDuration());
     }
 
@@ -68,13 +70,14 @@ public class StudentRVAdapter extends ListAdapter<StudentModal, StudentRVAdapter
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         // view holder class to create a variable for each view.
-        TextView  studentNameTV,  studentPhoneTV, courseDurationTV;
+        TextView  studentNameTV,  studentPhoneTV,registrationDateTV, courseDurationTV;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             // initializing each view of our recycler view.
             studentNameTV = itemView.findViewById(R.id.idTVStudentName);
             studentPhoneTV = itemView.findViewById(R.id.idTVStudentPhone);
+            registrationDateTV = itemView.findViewById(R.id.idTVStartDate);
             courseDurationTV = itemView.findViewById(R.id.idTVCourseDuration);
 
             // adding on click listener for each item of recycler view.

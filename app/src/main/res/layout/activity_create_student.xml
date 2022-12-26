@@ -115,8 +115,7 @@
                         android:fontFamily="@font/poppins_semibold"
                         android:text="@string/tanggal_pendaftaran"
                         android:textColor="@android:color/black"
-                        android:textSize="17sp"
-                        android:visibility="gone" />
+                        android:textSize="17sp"/>
 
                     <EditText
                         android:id="@+id/etDaftar"
@@ -129,8 +128,17 @@
                         android:hint="@string/masukkan_tanggal_pendaftaran"
                         android:inputType="date"
                         android:minHeight="48dp"
-                        android:textSize="16sp"
-                        android:visibility="gone" />
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/btnDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtDaftar"
+                        android:src="@drawable/calender"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"/>
 
                     <TextView
                         android:id="@+id/txtDurasi"

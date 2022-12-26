@@ -21,17 +21,17 @@ public class StudentModal {
 
     private String studentPhone;
 
-//    private String registrationDate;
+    private String registrationDate;
 
     private String courseDuration;
 
     // below line we are creating constructor class.
     // inside constructor class we are not passing
     // our id because it is incrementing automatically
-    public StudentModal(String studentName,String studentPhone,String courseDuration) {
+    public StudentModal(String studentName,String studentPhone,String registrationDate,String courseDuration) {
         this.studentName = studentName;
         this.studentPhone = studentPhone;
-//        this.registrationDate= registrationDate;
+        this.registrationDate= registrationDate;
         this.courseDuration = courseDuration;
     }
 
@@ -52,11 +52,13 @@ public class StudentModal {
 
     public void setStudentPhone(String studentPhone) { this.studentPhone = studentPhone;}
 
-//    public String getStartDate() {
-//        return start_date;
-//    }
-//
-//    public void setStartDate(String start_date) { this.start_date = start_date;}
+    public String getRegistrationDate() {
+        return registrationDate;
+    }
+
+    public void setRegistrationDate(String registrationDate) {
+        this.registrationDate = registrationDate;
+    }
 
     public String getCourseDuration() {
         return courseDuration;

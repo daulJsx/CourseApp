@@ -98,6 +98,7 @@ public class ListDataStudent extends AppCompatActivity {
                 intent.putExtra(activity_create_student.EXTRA_STUDENT_ID, model.getStudentId());
                 intent.putExtra(activity_create_student.EXTRA_STUDENT_NAME, model.getStudentName());
                 intent.putExtra(activity_create_student.EXTRA_PHONE, model.getStudentPhone());
+                intent.putExtra(activity_create_student.EXTRA_REGIS, model.getRegistrationDate());
                 intent.putExtra(activity_create_student.EXTRA_COURSE_DURATION, model.getCourseDuration());
 
                 // below line is to start a new activity and
@@ -113,8 +114,9 @@ public class ListDataStudent extends AppCompatActivity {
         if (requestCode == ADD_STUDENT_REQUEST && resultCode == RESULT_OK) {
             String studentName = data.getStringExtra(activity_create_student.EXTRA_STUDENT_NAME);
             String studentPhone = data.getStringExtra(activity_create_student.EXTRA_PHONE);
+            String studentRegis = data.getStringExtra(activity_create_student.EXTRA_REGIS);
             String courseDuration = data.getStringExtra(activity_create_student.EXTRA_COURSE_DURATION);
-            StudentModal model = new StudentModal(studentName, studentPhone, courseDuration);
+            StudentModal model = new StudentModal(studentName, studentPhone, studentRegis, courseDuration);
             studentViewModal.insert(model);
             Toast.makeText(this, "Course saved", Toast.LENGTH_SHORT).show();
         } else if (requestCode == EDIT_STUDENT_REQUEST && resultCode == RESULT_OK) {
@@ -125,8 +127,9 @@ public class ListDataStudent extends AppCompatActivity {
             }
             String studentName = data.getStringExtra(activity_create_student.EXTRA_STUDENT_NAME);
             String studentPhone = data.getStringExtra(activity_create_student.EXTRA_PHONE);
+            String studentRegis = data.getStringExtra(activity_create_student.EXTRA_REGIS);
             String courseDuration = data.getStringExtra(activity_create_student.EXTRA_COURSE_DURATION);
-            StudentModal model = new StudentModal(studentName, studentPhone, courseDuration);
+            StudentModal model = new StudentModal(studentName, studentPhone, studentRegis, courseDuration);
             model.setStudentId(id);
             studentViewModal.update(model);
             Toast.makeText(this, "Course updated", Toast.LENGTH_SHORT).show();
